@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+
+
+{% block content %}
+<div class="container">
+  <div class="jumbotron" style="background-color: white;">
+    <h1 class="display-4 text-center">App, TO-DO-LIST</h1>
+    <p class="text-center">this is todolist app, you can create,read, update and delete in this app, Thankyou</p>
+    <form action="" method="POST">
+      {% if edit %}
+        <input type="text" name='todo' class='form-control text-center mb-3' , style="width: 380px; margin-left: 350px;" , value='{{ editTodo.mytodolist }}'>
+        {{ form.update(class='btn btn-success text-center',style="margin-left: 480px;") }}
+      {% else %}        
+        <input type="text" name='todo' class='form-control text-center mb-3' , style="width: 380px; margin-left: 350px;" , placeholder="Silakan masukan TO-DO-LIST disini">
+        {{ form.submit(class='btn btn-success text-center',style="margin-left: 480px;") }}
+      {% endif %}
+    </form>
+
+
+  </div>
+  <table class="table table-hover text-center" style="background-color: #dce4f1; margin-top: -40px;">
+    <thead class="btn-success">
+      <tr>
+        <th scope="col">NO</th>
+        <th scope="col">My To-do-list</th>
+        <th scope="col">Tanggal</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for baris in data %}
+      <tr class="tex">
+        <td>{{loop.index}}</td>
+        <td>{{baris.mytodolist}}</td>
+        <td>{{baris.date.strftime("%d-%B-%Y - %X")}}</td>
+        <td class="btn btn-primary p-1 pr-3 pl-3 mt-2 ml-3 mr-2"><a class="text-white" style="text-decoration: none;" href="/edit/{{baris.id}}">Edit</a></td>
+        <td class="btn btn-danger p-1 mt-2 "><a class="text-white" style="text-decoration: none;" href="/delete/{{baris.id}}">Delete</a></td>
+      </tr>
+      {% endfor %}
+
+    </tbody>
+  </table>
+</div>
+{% endblock content %}
