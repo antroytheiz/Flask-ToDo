@@ -4,14 +4,18 @@
 {% block content %}
 <div class="container">
   <div class="jumbotron" style="background-color: white;">
-    <h1 class="display-4 text-center">App, TO-DO-LIST</h1>
-    <p class="text-center">this is todolist app, you can create,read, update and delete in this app, Thankyou</p>
+    <h1 class="display-4 text-center" style="font-family: Aclonica;">To-Do-List</h1>
+    <p class="text-center" style="font-family: Bubbler One; font-size: 20px;">
+      Ini adalah aplikasi manajement todolist anda, <br> Anda dapat menggunakan fungsi <b>Create, Read, Update, dan Delete (CRUD)</b> di aplikasi ini, Terima kasih</p>
+    <p class="text-center" style="font-family: Comic Neue;">Build by : Theiz Andatu</p>
+    <hr>
+    <br>
     <form action="" method="POST">
       {% if edit %}
         <input type="text" name='todo' class='form-control text-center mb-3' , style="width: 380px; margin-left: 350px;" , value='{{ editTodo.mytodolist }}'>
         {{ form.update(class='btn btn-success text-center',style="margin-left: 480px;") }}
       {% else %}        
-        <input type="text" name='todo' class='form-control text-center mb-3' , style="width: 380px; margin-left: 350px;" , placeholder="Silakan masukan TO-DO-LIST disini">
+        <input type="text" name='todo' class='form-control text-center mb-3' , style="width: 380px; margin-left: 350px;" , placeholder="Masukan to-do-list kamu disini">
         {{ form.submit(class='btn btn-success text-center',style="margin-left: 480px;") }}
       {% endif %}
     </form>
@@ -21,10 +25,10 @@
   <table class="table table-hover text-center" style="background-color: #dce4f1; margin-top: -40px;">
     <thead class="btn-success">
       <tr>
-        <th scope="col">NO</th>
-        <th scope="col">My To-do-list</th>
+        <th scope="col">ID</th>
+        <th scope="col">To-do</th>
         <th scope="col">Tanggal</th>
-        <th scope="col">Action</th>
+        <th scope="col">Aksi</th>
       </tr>
     </thead>
     <tbody>
