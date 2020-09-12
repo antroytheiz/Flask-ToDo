@@ -13,8 +13,8 @@
 * python run.py
 * open your browser and typing localhost:5000
 
-*** Thank You
-*** Build by Theiz Andatu
+### Thank You
+* Build by Theiz Andatu
 
 
 
