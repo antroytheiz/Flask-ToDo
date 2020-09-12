@@ -8,7 +8,13 @@
 * git clone https://github.com/antroytheiz/Flask-ToDo.git
 * cd Flask-Todo
 * python -m venv python-env
-* source env/bin/activate/
+* source python-env/bin/activate/
 * pip install -r requirements.txt
+* python run.py
+* open your browser and typing localhost:5000
+
+*** Thank You
+*** Build by Theiz Andatu
+
 
 
