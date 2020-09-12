@@ -11,7 +11,7 @@
 * source python-env/bin/activate/
 * pip install -r requirements.txt
 * python run.py
-* open your browser and typing localhost:5000
+* open your browser and typing _localhost:5000_
 
 ### Thank You
 * Build by Theiz Andatu
