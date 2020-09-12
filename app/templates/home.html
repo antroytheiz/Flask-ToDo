@@ -12,10 +12,10 @@
     <br>
     <form action="" method="POST">
       {% if edit %}
-        <input type="text" name='todo' class='form-control text-center mb-3' , style="width: 380px; margin-left: 350px;" , value='{{ editTodo.mytodolist }}'>
+        <input type="text" name='todo' class='form-control text-center mb-3' , style="width: 380px; margin-left: 350px;" ,autocomplete=off , value='{{ editTodo.mytodolist }}'>
         {{ form.update(class='btn btn-success text-center',style="margin-left: 480px;") }}
       {% else %}        
-        <input type="text" name='todo' class='form-control text-center mb-3' , style="width: 380px; margin-left: 350px;" , placeholder="Masukan to-do-list kamu disini">
+        <input type="text" name='todo' class='form-control text-center mb-3' , style="width: 380px; margin-left: 350px;", autocomplete=off , placeholder="Masukan to-do-list kamu disini">
         {{ form.submit(class='btn btn-success text-center',style="margin-left: 480px;") }}
       {% endif %}
     </form>
